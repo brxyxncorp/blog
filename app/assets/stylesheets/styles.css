@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Ultra);
+@import url(https://fonts.googleapis.com/css?family=Oregano);
+@import url(https://fonts.googleapis.com/css?family=Candal);
+/*--------------------
+    Colors
+--------------------*/
+:root{
+    --navcolor: #369;
+    --navlinks: #f0f0f0;
+}
+
+/*--------------------
+    General Styles
+--------------------*/
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+a, a:hover{text-decoration: none;}
+ul, li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+img{
+    max-width: 100%;
+}
+/*--------------------
+    Navbar Styles
+--------------------*/
+header{
+    font-size: 14pt;
+    padding: 10px 50px;
+    background-color: var(--navcolor);
+}
+nav{
+    width: 100%;
+}
+nav .navbar-brand{
+    color: #f1f1f1;
+    text-transform: uppercase;
+    font-family: 'Oregano', cursive, sans-serif;
+}
+nav ul li{
+    display: inline-block;
+    color: #f0f0f0;
+    margin: 0 8px;
+}
+nav ul li:last-child{
+    margin-right: 0;
+}
+nav a{
+    color: var(--navlinks);
+}
+nav *{display: inline-block;}
+.navigation{
+    float: right;
+}
+/*--------------------
+    Header Styles
+--------------------*/
+.background_image{
+    background-image: url(<%= asset_path fondo1.png %>);
+}
+
+/*--------------------
+    Content Styles
+--------------------*/
+div.container h1{
+    color: #666;
+    font-family: 'Canda', sans-serif;
+    font-weight: 400;
+}
+/*--------------------
+    Footer Styles
+--------------------*/
+

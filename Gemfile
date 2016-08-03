@@ -30,6 +30,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #Devise para administración de usuarios
 gem 'devise'
+gem 'devise-i18n'
+gem 'rails-i18n'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

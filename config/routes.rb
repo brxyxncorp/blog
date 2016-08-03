@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  resources :users, only: [:index, :show]
+  
   root 'static_pages#home'
+  get '/blog', to: 'static_pages#blog'
+  get '/servicios', to: 'static_pages#services'
+  get '/contacto', to: 'static_pages#contact'
+  get '/biografia', to: 'static_pages#biography'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

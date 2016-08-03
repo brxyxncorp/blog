@@ -1,0 +1,28 @@
+<% if current_user %> Bienvenido
+	<% if current_user.username? %>
+		<%= current_user.username %>
+	<% else %>
+		<%= current_user.email %>
+	<% end %>
+	<br>
+	Nombre: <%= @user.name %> <br>
+	Fecha de nacimiento: <%= @user.date_of_birth %> <br>
+	<% case @user.sex %>
+		<% when 1 %>
+			Sexo: Hombre
+		<% when 2 %>
+			Sexo: Mujer
+		<% else %>
+			Sexo: Sin especificar
+	<% end %><br>
+	Descripción: <%= @user.description %> <br>
+	Página Web: <a href="<%= @user.contact %>"><%= @user.contact %> </a> <br>
+	<!--
+	Contraseña encriptada: <%= @user.encrypted_password %> <br>
+	Fecha de creación: <%= @user.remember_created_at %> <br>
+	Conteo de Inicio de Sesión: <%= @user.sign_in_count %> <br>
+	Actual Inicio de Sesión: <%= @user.current_sign_in_at %> <br>
+	Último Inicio de Sesión: <%= @user.last_sign_in_at %> <br>
+	Actual Dirección IP: <%= @user.current_sign_in_ip %> <br>
+	Última Dirección IP: <%= @user.last_sign_in_ip %> <br>-->
+<% end %>

@@ -1,27 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Blog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<!--<title>Blog</title>-->
+	<%= yield :head %>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
-<body>
+<body onload="notify()">
 
-<% flash.each do |key, value| %>
-<div class="alert alert-<%= key %> alert-dismissable">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-    <%= value %>
+<header><%= render 'layouts/navbar' %></header>
+<div class="alerts"><%= render 'layouts/alerts' %></div>
+
+<div class="container">
+	<%= yield %>
 </div>
-<% end %>
-
-<% if current_user %>
-    Welcome <%= current_user.email %> <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-<% else %>
-    <%= link_to 'Login', new_user_session_path %>
-<% end %>
-
-<%= yield %>
 
 </body>
 </html>
