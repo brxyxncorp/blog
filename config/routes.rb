@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :users, only: [:index, :show]
+  resources :users, only: [:index, :show]#, path_names: {index: "usuarios", show: ":id"}
+  get '/usuario/:name', to: redirect('/usuario/%{name}')
+
+  get '/perfil', to: 'users#perfil'
   
   root 'static_pages#home'
   get '/blog', to: 'static_pages#blog'

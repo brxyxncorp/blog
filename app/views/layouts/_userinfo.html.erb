@@ -1,8 +1,14 @@
+
+
+<% unless @user.name.blank? %>
+	<li>Nombre: <%= @user.name %></li>
+<% end %>
+
 <% if current_user %> Bienvenido
-	<% if current_user.username? %>
-		<%= current_user.username %>
+	<% if @user.username? %>
+		<%= @user.username %>
 	<% else %>
-		<%= current_user.email %>
+		<%= @user.email %>
 	<% end %>
 	<br>
 	Nombre: <%= @user.name %> <br>
@@ -16,7 +22,8 @@
 			Sexo: Sin especificar
 	<% end %><br>
 	Descripción: <%= @user.description %> <br>
-	Página Web: <a href="<%= @user.contact %>"><%= @user.contact %> </a> <br>
+	Información de Contacto: <a href="mailto:<%= @user.contact %>"><%= @user.contact %> </a> <br>
+	Página Web: <%= link_to @user.webtitle, @user.webpage %><br>
 	<!--
 	Contraseña encriptada: <%= @user.encrypted_password %> <br>
 	Fecha de creación: <%= @user.remember_created_at %> <br>

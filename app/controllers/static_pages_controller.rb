@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
 	def services
 	end
 	def contact
+		@users = User.all
 	end
 	def biography
 	end

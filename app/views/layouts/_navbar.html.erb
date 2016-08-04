@@ -1,18 +1,38 @@
-<nav class="navbar">
-	<%= link_to "Conected", root_path, class: 'navbar-brand' %>
+<% x = request.fullpath %>
+<% if x == "/perfil" or x == "/users/edit" or x >= "/users/0" %>
+	<nav class="navbar">
+		<%= link_to "Conected", root_path, class: 'navbar-brand' %>
 
-	<ul class="navigation">
-		<li><%= link_to 'Inicio', root_path %></li>
-		<li><%= link_to 'Blog', blog_path %></li>
-		<li><%= link_to 'Servicios', servicios_path %></li>
-		<li><%= link_to 'Contacto', contacto_path %></li>
-		<li><%= link_to 'Biografía', biografia_path %></li>
-		<li><%= link_to 'Usuarios', users_path %></li>
-		<% if current_user %>
-		<li><%= link_to 'Editar Perfil', edit_user_registration_path %></li>
-		<li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
-		<% else %>
-		<li><%= link_to 'Login', new_user_session_path %></li>
-		<% end %>
-	</ul>
-</nav>
+		<ul class="navigation">
+			<li><%= link_to 'Inicio', root_path %></li>
+			<li><%= link_to 'Usuarios', users_path %></li>
+			<% if current_user %>
+				<li><%= link_to 'Perfil', perfil_path %></li>
+				<li><%= link_to 'Editar Perfil', edit_user_registration_path %></li>
+				<li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+			<% else %>
+			<li><%= link_to 'Login', new_user_session_path %></li>
+			<% end %>
+		</ul>
+	</nav>
+<% else %>
+	<nav class="navbar">
+		<%= link_to "Conected", root_path, class: 'navbar-brand' %>
+
+		<ul class="navigation">
+			<li><%= link_to 'Inicio', root_path %></li>
+			<li><%= link_to 'Blog', blog_path %></li>
+			<li><%= link_to 'Servicios', servicios_path %></li>
+			<li><%= link_to 'Contacto', contacto_path %></li>
+			<li><%= link_to 'Biografía', biografia_path %></li>
+			<li><%= link_to 'Usuarios', users_path %></li>
+			<% if current_user %>
+				<li><%= link_to 'Perfil', perfil_path %></li>
+				<li><%= link_to 'Editar Perfil', edit_user_registration_path %></li>
+				<li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+			<% else %>
+			<li><%= link_to 'Login', new_user_session_path %></li>
+			<% end %>
+		</ul>
+	</nav>
+<% end %>

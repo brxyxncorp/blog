@@ -4,6 +4,15 @@ es:
       user:
         current_password: Contraseña actual
         email: Correo electrónico
+        date_of_birth: Fecha de nacimiento
+        sex: Sexo
+        none: Sin especificar
+        male: Hombre
+        female: Mujer
+        description: Descripción
+        contact: Información de Contacto
+        webpage: Página Web
+        webtitle: Nombre de tu Página Web
         password: Contraseña
         password_confirmation: Confirmación de la contraseña
         remember_me: Recordarme
@@ -72,11 +81,11 @@ es:
       destroyed: "¡Adiós! Tu cuenta ha sido cancelada correctamente. Esperamos verte pronto."
       edit:
         are_you_sure: "¿Está usted seguro?"
-        cancel_my_account: Anular mi cuenta
+        cancel_my_account: Eliminar mi cuenta
         currently_waiting_confirmation_for_email: 'Actualmente esperando la confirmacion de: %{email} '
         leave_blank_if_you_don_t_want_to_change_it: dejar en blanco si no desea cambiarlo
         title: Editar %{resource}
-        unhappy: Infeliz
+        unhappy: "¿No te ha gustado?"
         update: Actualizar
         we_need_your_current_password_to_confirm_your_changes: necesitamos su contraseña actual para confirmar los cambios
       new:

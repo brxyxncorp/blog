@@ -4,11 +4,20 @@ es-MX:
       user:
         current_password: Contraseña actual
         email: Correo electrónico
+        date_of_birth: Fecha de nacimiento
+        sex: Sexo
+        none: Sin especificar
+        male: Hombre
+        female: Mujer
+        description: Descripción
+        contact: Información de Contacto
+        webpage: Página Web
+        webtitle: Nombre de tu Página Web
         password: Contraseña
         password_confirmation: Confirmación de la contraseña
         remember_me: Recordarme
-        reset_password_token: Restablecer autentificador de contraseña
-        unlock_token: Autentificador de desbloqueo
+        reset_password_token: Restablecer token contraseña
+        unlock_token: Desbloquear token
     models:
       user: Usuario
   devise:

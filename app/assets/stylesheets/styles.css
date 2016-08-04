@@ -30,7 +30,7 @@ img{
 /*--------------------
     Navbar Styles
 --------------------*/
-header{
+.header{
     font-size: 14pt;
     padding: 10px 50px;
     background-color: var(--navcolor);

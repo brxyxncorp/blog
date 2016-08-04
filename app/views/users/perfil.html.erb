@@ -19,3 +19,10 @@
     <% end %>
     <hr>
 </ul>
+
+<header>
+	<p><% x = request.original_url %></p>
+	<p><%= x %></p>
+	<p><%= request.original_fullpath %></p>
+	<p><%= request.fullpath %></p>
+</header>
