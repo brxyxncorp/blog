@@ -4,10 +4,6 @@
 /*--------------------
     Colors
 --------------------*/
-:root{
-    --navcolor: #369;
-    --navlinks: #f0f0f0;
-}
 
 /*--------------------
     General Styles
@@ -33,7 +29,7 @@ img{
 .header{
     font-size: 14pt;
     padding: 10px 50px;
-    background-color: var(--navcolor);
+    background-color: #369;
 }
 nav{
     width: 100%;
@@ -52,7 +48,7 @@ nav ul li:last-child{
     margin-right: 0;
 }
 nav a{
-    color: var(--navlinks);
+    color: #f0f0f0;
 }
 nav *{display: inline-block;}
 .navigation{
