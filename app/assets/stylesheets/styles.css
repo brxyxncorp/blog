@@ -69,3 +69,19 @@ div.container h1{
     Footer Styles
 --------------------*/
 
+footer {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    margin-top: 15px;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.footer{
+    height: 100px;
+}
