@@ -56,9 +56,6 @@ nav *{display: inline-block;}
 /*--------------------
     Header Styles
 --------------------*/
-.background_image{
-    background-image: url(<%= asset_path fondo1.png %>);
-}
 
 /*--------------------
     Content Styles
