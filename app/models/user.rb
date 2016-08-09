@@ -5,11 +5,11 @@ class User < ActiveRecord::Base
 		:recoverable, :rememberable, :trackable, :validatable
 
 	def full_name
-		username.blank? ? email : username
-		# if self.username.blank?
-		#	self.email
-		# else
-		#	self.username
-		# end
+		
+		if self.username.blank?
+			self.email
+		else
+			self.username
+		end
 	end
 end
